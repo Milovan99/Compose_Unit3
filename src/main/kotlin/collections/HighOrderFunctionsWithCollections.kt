@@ -113,6 +113,9 @@ fun main(){
 
      */
 
+    /* fold()
+
+
     val totalPrice = HighOrderFunctionsWithCollections().cookies.fold(0.0){
         total,cookie->
         total+cookie.price
@@ -120,3 +123,14 @@ fun main(){
 
     println("Total price: $${totalPrice}")
 }
+
+     */
+
+    val alphabeticalMenu=HighOrderFunctionsWithCollections().cookies.sortedBy {
+        it.name
+    }
+    println("Alphabetical menu:")
+    alphabeticalMenu.forEach {
+        println(it.name)
+    }
+    }
