@@ -10,14 +10,18 @@ class Quiz {
         val difficulty:Difficulty
     )
 
+    companion object StudentProgress{
+        var total:Int=10
+        var answered:Int=3
+    }
+    val question1=Question<String>("Quoth the raven ___","nevermore", Difficulty.MEDIUM)
+    val question2=Question<Boolean>("The sky is green.True or false",false, Difficulty.EASY)
+    val question3=Question<Int>("How many days are between full moons?",28, Difficulty.HARD)
 
 
 }
 
 fun main(){
-    val question1=Quiz.Question<String>("Quoth the raven ___","nevermore",Quiz.Difficulty.MEDIUM)
-    val question2=Quiz.Question<Boolean>("The sky is green.True or false",false,Quiz.Difficulty.EASY)
-    val question3=Quiz.Question<Int>("How many days are between full moons?",28,Quiz.Difficulty.HARD)
-println(question1.toString())
+    println("${Quiz.answered} of ${Quiz.total} answered.")
 
 }
