@@ -55,10 +55,17 @@ class HighOrderFunctionsWithCollections {
     )
 }
 fun main(){
- /*   HighOrderFunctionsWithCollections().cookies.forEach{
+
+ /*    forEach()
+
+
+  HighOrderFunctionsWithCollections().cookies.forEach{
         println("Menu item : ${it.name}")
     }
     */
+
+/*    map()
+
 
     val fullMenu=HighOrderFunctionsWithCollections().cookies.map {
         "${it.name} - $${it.price}"
@@ -68,4 +75,48 @@ fun main(){
     fullMenu.forEach{
         println(it)
     }
+    */
+
+/*  filter()
+
+
+    val softBakedMenu=HighOrderFunctionsWithCollections().cookies.filter {
+        it.softBaked
+    }
+    println("Soft cookies")
+    softBakedMenu.forEach{
+        println("${it.name} - $${it.price}")
+    }
+
+ */
+
+    /* groupBy
+
+
+
+    val groupedMenu=HighOrderFunctionsWithCollections().cookies.groupBy {
+        it.softBaked
+    }
+
+    val softBakedMenu=groupedMenu[true]?: listOf()
+    val crunchyMenu=groupedMenu[false]?: listOf()
+
+    println("Soft cookies:")
+    softBakedMenu.forEach {
+        println("${it.name} - $${it.price}")
+    }
+    println()
+    println("Crunchy cookies:")
+    crunchyMenu.forEach {
+        println("${it.name} - $${it.price}")
+    }
+
+     */
+
+    val totalPrice = HighOrderFunctionsWithCollections().cookies.fold(0.0){
+        total,cookie->
+        total+cookie.price
+    }
+
+    println("Total price: $${totalPrice}")
 }
