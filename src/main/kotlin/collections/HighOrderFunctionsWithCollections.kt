@@ -55,7 +55,17 @@ class HighOrderFunctionsWithCollections {
     )
 }
 fun main(){
-    HighOrderFunctionsWithCollections().cookies.forEach{
+ /*   HighOrderFunctionsWithCollections().cookies.forEach{
         println("Menu item : ${it.name}")
+    }
+    */
+
+    val fullMenu=HighOrderFunctionsWithCollections().cookies.map {
+        "${it.name} - $${it.price}"
+    }
+
+    println("Full menu:")
+    fullMenu.forEach{
+        println(it)
     }
 }
