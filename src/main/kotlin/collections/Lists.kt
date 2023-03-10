@@ -14,14 +14,14 @@ fun main(){
     for (planet in Lists().solarSystem){
         println(planet)
     }
-    var mutablrSolarSystem=Lists().mutableSolarSystem
-    mutablrSolarSystem.add("Pluto")
-    mutablrSolarSystem.add(3,"Theia")
-    mutablrSolarSystem[3] = "Future Moon"
-    println(mutablrSolarSystem[3])
-    println(mutablrSolarSystem[9])
-    mutablrSolarSystem.removeAt(9)
-    mutablrSolarSystem.remove("Future Moon")
-    println(mutablrSolarSystem.contains("Pluto"))
-    println("Future Moon" in mutablrSolarSystem)
+    var mutableSolarSystem=Lists().mutableSolarSystem
+    mutableSolarSystem.add("Pluto")
+    mutableSolarSystem.add(3,"Theia")
+    mutableSolarSystem[3] = "Future Moon"
+    println(mutableSolarSystem[3])
+    println(mutableSolarSystem[9])
+    mutableSolarSystem.removeAt(9)
+    mutableSolarSystem.remove("Future Moon")
+    println(mutableSolarSystem.contains("Pluto"))
+    println("Future Moon" in mutableSolarSystem)
 }
